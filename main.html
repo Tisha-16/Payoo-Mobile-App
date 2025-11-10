@@ -26,7 +26,9 @@
         <div class="flex">
           <img src="./images/Group (1).png" alt="" class="h-[50px]" />
           <div class="ml-3">
-            <h2 class="font-bold">$ <span>45000</span></h2>
+            <h2 class="font-bold">
+              $ <span id="available-balance">45000</span>
+            </h2>
             <p class="text-gray-500">Available Balance</p>
           </div>
         </div>
@@ -81,7 +83,10 @@
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mb-3">
             <h1 class="font-semibold text-gray-600">Select A Bank</h1>
-            <select class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+            <select
+              id="bank"
+              class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            >
               <option>Pick a Bank</option>
               <option>AB Bank</option>
               <option>EXAM Bank</option>
@@ -94,6 +99,7 @@
             >
             <br />
             <input
+              id="account-number"
               type="text"
               placeholder="Enter 11 digit account number"
               class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
@@ -105,6 +111,7 @@
             >
             <br />
             <input
+              id="add-amount"
               type="text"
               placeholder="Add Amount to withdraw"
               class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
@@ -114,16 +121,23 @@
             <label for="" class="font-semibold text-gray-600">Pin Number</label>
             <br />
             <input
+              id="add-pin"
               type="text"
               placeholder="Enter 4 digit pin number"
               class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
             />
           </div>
-          <button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">
+          <button
+            id="add-money-btn"
+            class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white"
+          >
             Add Money
           </button>
         </form>
       </div>
     </div>
+
+    <!-- script  -->
+    <script src="./main.js"></script>
   </body>
 </html>
