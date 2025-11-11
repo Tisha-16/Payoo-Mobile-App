@@ -3,152 +3,268 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- daisy ul cdn  -->
+    <title>Payooo</title>
+    <!-- daisy ui -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
-    <!-- tailwind cdn  -->
+    <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- font awesome cdn  -->
+    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
   </head>
+
   <body class="bg-[#f4f5f7]">
-    <div class="max-w-lg mx-auto bg-white p-3 rounded-b-xl">
+    <!-- 🔹 Header & Welcome Section -->
+    <div
+      class="max-w-lg mx-auto bg-white p-3 rounded-b-xl shadow-md border-b border-gray-200"
+    >
       <div
-        class="flex justify-between items-center border-b-1 border-gray-300 p-3 min-h-[50px]"
+        class="flex justify-between items-center border-b border-gray-300 p-3"
       >
         <div class="flex">
           <img src="./images/Group (1).png" alt="" class="h-[50px]" />
           <div class="ml-3">
-            <h2 class="font-bold">
+            <h2 class="font-bold text-lg">
               $ <span id="available-balance">45000</span>
             </h2>
-            <p class="text-gray-500">Available Balance</p>
+            <p class="text-gray-500 text-sm">Available Balance</p>
           </div>
         </div>
         <div>
           <button class="btn text-gray-500">
             <i
               class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-400"
-            ></i
-            >Default
+            ></i>
+            Default
           </button>
         </div>
       </div>
-      <div class="mt-8 p-3">
+
+      <div class="mt-6 px-3">
         <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
-        <p class="text-gray-500">
-          Enjoy easy and convenient financial services with us. <br />
-          Cashout charge is low and
+        <p class="text-gray-500 text-sm leading-snug">
+          Enjoy easy and convenient financial services with us.<br />
+          Cashout charge is low and service is fast.
         </p>
-      </div>
-      <div class="h-[200px] mt-[24px] grid grid-cols-3 gap-4 p-3">
-        <div
-          id="add-button"
-          class="p-3 text-center rounded-xl border-1 border-gray-300"
-        >
-          <img src="./images/wallet 1.png" alt="" class="mx-auto" />
-          <h1 class="text-gray-500">Add Money</h1>
-        </div>
-        <div
-          id="cash-out-button"
-          class="p-3 text-center rounded-xl border-1 border-gray-300"
-        >
-          <img src="./images/send 1.png" alt="" class="mx-auto" />
-          <h1 class="text-gray-500">Cashout</h1>
-        </div>
-        <div class="p-3 text-center rounded-xl border-1 border-gray-300">
-          <img src="./images/money 1.png" alt="" class="mx-auto" />
-          <h1 class="text-gray-500">Transfer Money</h1>
-        </div>
-        <div class="p-3 text-center rounded-xl border-1 border-gray-300">
-          <img src="./images/financial 1.png" alt="" class="mx-auto" />
-          <h1 class="text-gray-500">Get Bonus</h1>
-        </div>
-        <div class="p-3 text-center rounded-xl border-1 border-gray-300">
-          <img src="./images/purse 1.png" alt="" class="mx-auto" />
-          <h1 class="text-gray-500">Pay Bill</h1>
-        </div>
-        <div class="p-3 text-center rounded-xl border-1 border-gray-300">
-          <img src="./images/transaction 1.png" alt="" class="mx-auto" />
-          <h1 class="text-gray-500">Transactions</h1>
-        </div>
       </div>
     </div>
 
-    <div class="all-form-sections max-w-lg mx-auto">
-      <!-- add money  -->
-      <div class="add-money-parent">
-        <h1 class="font-bold">Add Money</h1>
-        <form action="" class="bg-white rounded-2xl p-8">
+    <!-- 🔹 Main Grid Options -->
+    <div
+      id="main-options"
+      class="max-w-lg mx-auto bg-white mt-4 rounded-xl p-3 grid grid-cols-3 gap-4"
+    >
+      <div
+        id="add-button"
+        class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
+      >
+        <img src="./images/wallet 1.png" alt="" class="mx-auto" />
+        <h1 class="text-gray-600 font-medium mt-1">Add Money</h1>
+      </div>
+
+      <div
+        id="cash-out-button"
+        class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
+      >
+        <img src="./images/send 1.png" alt="" class="mx-auto" />
+        <h1 class="text-gray-600 font-medium mt-1">Cashout</h1>
+      </div>
+
+      <div
+        id="transfer-button"
+        class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
+      >
+        <img src="./images/money 1.png" alt="" class="mx-auto" />
+        <h1 class="text-gray-600 font-medium mt-1">Transfer</h1>
+      </div>
+
+      <div
+        class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
+      >
+        <img src="./images/financial 1.png" alt="" class="mx-auto" />
+        <h1 class="text-gray-600 font-medium mt-1">Get Bonus</h1>
+      </div>
+
+      <div
+        class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
+      >
+        <img src="./images/purse 1.png" alt="" class="mx-auto" />
+        <h1 class="text-gray-600 font-medium mt-1">Pay Bill</h1>
+      </div>
+
+      <div
+        class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
+      >
+        <img src="./images/transaction 1.png" alt="" class="mx-auto" />
+        <h1 class="text-gray-600 font-medium mt-1">Transactions</h1>
+      </div>
+    </div>
+
+    <!-- 🔹 Dynamic Form Section (Initially hidden) -->
+    <div
+      id="form-section"
+      class="max-w-lg mx-auto bg-white mt-4 rounded-2xl p-6 hidden transition-all duration-500"
+    ></div>
+
+    <!--  Script -->
+    <script>
+      const formSection = document.getElementById("form-section");
+
+      const addBtn = document.getElementById("add-button");
+      const cashoutBtn = document.getElementById("cash-out-button");
+      const transferBtn = document.getElementById("transfer-button"); // ✅ FIXED
+
+      // Add Money Form Template
+      const addMoneyForm = `
+        <h1 class="font-bold text-lg mb-4 text-gray-700">Add Money</h1>
+        <form>
           <div class="mb-3">
-            <h1 class="font-semibold text-gray-600">Select A Bank</h1>
-            <select
-              id="bank"
-              class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full"
-            >
+            <label class="font-semibold text-gray-600">Select A Bank</label>
+            <select class="select bg-[#f4f5f7] mt-2 rounded-3xl w-full">
               <option>Pick a Bank</option>
               <option>AB Bank</option>
-              <option>EXAM Bank</option>
+              <option>EXIM Bank</option>
               <option>Trust Bank</option>
             </select>
           </div>
+
           <div class="mt-3">
-            <label for="" class="font-semibold text-gray-600"
-              >Bank Account Number</label
-            >
-            <br />
+            <label class="font-semibold text-gray-600">Account Number</label>
             <input
-              id="account-number"
               type="text"
               placeholder="Enter 11 digit account number"
-              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
             />
           </div>
+
           <div class="mt-3">
-            <label for="" class="font-semibold text-gray-600"
-              >Amount to Add</label
-            >
-            <br />
+            <label class="font-semibold text-gray-600">Amount to Add</label>
             <input
-              id="add-amount"
               type="text"
-              placeholder="Add Amount to withdraw"
-              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+              placeholder="Enter amount"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
             />
           </div>
+
           <div class="mt-3">
-            <label for="" class="font-semibold text-gray-600">Pin Number</label>
-            <br />
+            <label class="font-semibold text-gray-600">Pin Number</label>
             <input
-              id="add-pin"
-              type="text"
-              placeholder="Enter 4 digit pin number"
-              class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+              type="password"
+              placeholder="Enter 4 digit pin"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
             />
           </div>
+
           <button
-            id="add-money-btn"
             class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white"
+            type="submit"
           >
             Add Money
           </button>
         </form>
-      </div>
-    </div>
+      `;
 
-    <!-- cashout  -->
-    <div id="cash-out-parent" style="display: none">
-      <h1>cashout</h1>
-    </div>
+      // Cashout Form Template
+      const cashoutForm = `
+        <h1 class="font-bold text-lg mb-4 text-gray-700">Cash Out</h1>
+        <form>
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Agent Number</label>
+            <input
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
 
-    <!-- script  -->
-    <script src="./main.js"></script>
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Amount</label>
+            <input
+              type="text"
+              placeholder="Enter amount"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Pin Number</label>
+            <input
+              type="password"
+              placeholder="Enter 4 digit pin"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+
+          <button
+            class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white"
+            type="submit"
+          >
+            Withdraw Money
+          </button>
+        </form>
+      `;
+
+      // Transfer Form
+      const transferForm = `
+        <h1 class="font-bold text-lg mb-4 text-gray-700">Transfer Money</h1>
+        <form>
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">User Account Number</label>
+            <input
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Amount</label>
+            <input
+              type="text"
+              placeholder="Enter amount to transfer"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Pin Number</label>
+            <input
+              type="password"
+              placeholder="Enter 4 digit pin"
+              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
+            />
+          </div>
+
+          <button
+            class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white"
+            type="submit"
+          >
+            Transfer Money
+          </button>
+        </form>
+      `;
+
+      // toggle forms
+      addBtn.addEventListener("click", () => {
+        formSection.innerHTML = addMoneyForm;
+        formSection.classList.remove("hidden");
+      });
+
+      cashoutBtn.addEventListener("click", () => {
+        formSection.innerHTML = cashoutForm;
+        formSection.classList.remove("hidden");
+      });
+
+      transferBtn.addEventListener("click", () => {
+        formSection.innerHTML = transferForm;
+        formSection.classList.remove("hidden");
+      });
+    </script>
   </body>
 </html>
