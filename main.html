@@ -20,7 +20,7 @@
   </head>
 
   <body class="bg-[#f4f5f7]">
-    <!-- 🔹 Header & Welcome Section -->
+    <!--  Header & Welcome Section -->
     <div
       class="max-w-lg mx-auto bg-white p-3 rounded-b-xl shadow-md border-b border-gray-200"
     >
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <!-- 🔹 Main Grid Options -->
+    <!--  Main Grid Options -->
     <div
       id="main-options"
       class="max-w-lg mx-auto bg-white mt-4 rounded-xl p-3 grid grid-cols-3 gap-4"
@@ -85,6 +85,7 @@
       </div>
 
       <div
+        id="get-bonus-button"
         class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
       >
         <img src="./images/financial 1.png" alt="" class="mx-auto" />
@@ -92,6 +93,7 @@
       </div>
 
       <div
+        id="paybill-button"
         class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
       >
         <img src="./images/purse 1.png" alt="" class="mx-auto" />
@@ -99,6 +101,7 @@
       </div>
 
       <div
+        id="transaction-button"
         class="p-3 text-center rounded-xl border border-gray-300 cursor-pointer hover:bg-gray-50"
       >
         <img src="./images/transaction 1.png" alt="" class="mx-auto" />
@@ -106,7 +109,7 @@
       </div>
     </div>
 
-    <!-- 🔹 Dynamic Form Section (Initially hidden) -->
+    <!--  Dynamic Form Section -->
     <div
       id="form-section"
       class="max-w-lg mx-auto bg-white mt-4 rounded-2xl p-6 hidden transition-all duration-500"
@@ -116,11 +119,7 @@
     <script>
       const formSection = document.getElementById("form-section");
 
-      const addBtn = document.getElementById("add-button");
-      const cashoutBtn = document.getElementById("cash-out-button");
-      const transferBtn = document.getElementById("transfer-button"); // ✅ FIXED
-
-      // Add Money Form Template
+      //  Add Money Form
       const addMoneyForm = `
         <h1 class="font-bold text-lg mb-4 text-gray-700">Add Money</h1>
         <form>
@@ -133,138 +132,150 @@
               <option>Trust Bank</option>
             </select>
           </div>
-
           <div class="mt-3">
             <label class="font-semibold text-gray-600">Account Number</label>
-            <input
-              type="text"
-              placeholder="Enter 11 digit account number"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="text" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
           <div class="mt-3">
             <label class="font-semibold text-gray-600">Amount to Add</label>
-            <input
-              type="text"
-              placeholder="Enter amount"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="text" placeholder="Enter amount" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
           <div class="mt-3">
             <label class="font-semibold text-gray-600">Pin Number</label>
-            <input
-              type="password"
-              placeholder="Enter 4 digit pin"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="password" placeholder="Enter 4 digit pin" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
-          <button
-            class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white"
-            type="submit"
-          >
-            Add Money
-          </button>
+          <button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white" type="submit">Add Money</button>
         </form>
       `;
 
-      // Cashout Form Template
+      //  Cashout Form
       const cashoutForm = `
         <h1 class="font-bold text-lg mb-4 text-gray-700">Cash Out</h1>
         <form>
           <div class="mt-3">
             <label class="font-semibold text-gray-600">Agent Number</label>
-            <input
-              type="text"
-              placeholder="Enter 11 digit number"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="text" placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
           <div class="mt-3">
             <label class="font-semibold text-gray-600">Amount</label>
-            <input
-              type="text"
-              placeholder="Enter amount"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="text" placeholder="Enter amount" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
           <div class="mt-3">
             <label class="font-semibold text-gray-600">Pin Number</label>
-            <input
-              type="password"
-              placeholder="Enter 4 digit pin"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="password" placeholder="Enter 4 digit pin" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
-          <button
-            class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white"
-            type="submit"
-          >
-            Withdraw Money
-          </button>
+          <button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white" type="submit">Withdraw Money</button>
         </form>
       `;
 
-      // Transfer Form
+      //  Transfer Form
       const transferForm = `
         <h1 class="font-bold text-lg mb-4 text-gray-700">Transfer Money</h1>
         <form>
           <div class="mt-3">
             <label class="font-semibold text-gray-600">User Account Number</label>
-            <input
-              type="text"
-              placeholder="Enter 11 digit number"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="text" placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
           <div class="mt-3">
             <label class="font-semibold text-gray-600">Amount</label>
-            <input
-              type="text"
-              placeholder="Enter amount to transfer"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="text" placeholder="Enter amount to transfer" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
           <div class="mt-3">
             <label class="font-semibold text-gray-600">Pin Number</label>
-            <input
-              type="password"
-              placeholder="Enter 4 digit pin"
-              class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"
-            />
+            <input type="password" placeholder="Enter 4 digit pin" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
           </div>
-
-          <button
-            class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white"
-            type="submit"
-          >
-            Transfer Money
-          </button>
+          <button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white" type="submit">Transfer Money</button>
         </form>
       `;
 
-      // toggle forms
-      addBtn.addEventListener("click", () => {
-        formSection.innerHTML = addMoneyForm;
-        formSection.classList.remove("hidden");
-      });
+      // Get Bonus Form
+      const bonusForm = `
+        <h1 class="font-bold text-lg mb-4 text-gray-700">Get Bonus</h1>
+        <form>
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Enter Bonus Coupon</label>
+            <input type="text" placeholder="Enter your bonus coupon" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
+          </div>
+          <button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white" type="submit">Get Bonus</button>
+        </form>
+      `;
 
-      cashoutBtn.addEventListener("click", () => {
-        formSection.innerHTML = cashoutForm;
-        formSection.classList.remove("hidden");
-      });
+      //  Pay Bill Form
+      const paybillForm = `
+        <h1 class="font-bold text-lg mb-4 text-gray-700">Select To Pay</h1>
+        <form>
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Select back</label>
+            <select class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full">
+              <option>Select Bill Type</option>
+              <option>Electricity Bill</option>
+              <option>Gas Bill</option>
+              <option>Water Bill</option>
+              <option>Internet Bill</option>
+            </select>
+          </div>
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Biller Account Number</label>
+            <input type="text" placeholder="Enter account number" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
+          </div>
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Amount to pay</label>
+            <input type="number" placeholder="Add Amount to pay" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
+          </div>
+          <div class="mt-3">
+            <label class="font-semibold text-gray-600">Pin Number</label>
+            <input type="number" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-2 rounded-3xl w-full"/>
+          </div>
+          <button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white" type="submit">Pay Bill</button>
+        </form>
+      `;
 
-      transferBtn.addEventListener("click", () => {
-        formSection.innerHTML = transferForm;
+      // Transaction History Section
+      const transactionSection = `
+        <h1 class="font-bold text-lg mb-4 text-gray-700">Transaction History</h1>
+        <div class="bg-white rounded-lg shadow p-4 space-y-3">
+          <div class="flex justify-between border-b pb-2">
+            <span>Electricity Bill</span><span class="text-gray-500 text-sm">Today 01:44 AM</span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span>Bank Deposit</span><span class="text-gray-500 text-sm">Today 02:10 AM</span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span>Mobile Recharge</span><span class="text-gray-500 text-sm">Today 03:22 AM</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Gas Bill</span><span class="text-gray-500 text-sm">Yesterday 11:15 PM</span>
+          </div>
+        </div>
+      `;
+
+      //  Show Form Function
+      function showForm(content) {
+        formSection.innerHTML = content;
         formSection.classList.remove("hidden");
-      });
+        window.scrollTo({ top: formSection.offsetTop, behavior: "smooth" });
+      }
+
+      //  Event Listeners
+      document
+        .getElementById("add-button")
+        .addEventListener("click", () => showForm(addMoneyForm));
+      document
+        .getElementById("cash-out-button")
+        .addEventListener("click", () => showForm(cashoutForm));
+      document
+        .getElementById("transfer-button")
+        .addEventListener("click", () => showForm(transferForm));
+      document
+        .getElementById("get-bonus-button")
+        .addEventListener("click", () => showForm(bonusForm));
+      document
+        .getElementById("paybill-button")
+        .addEventListener("click", () => showForm(paybillForm));
+      document
+        .getElementById("transaction-button")
+        .addEventListener("click", () => showForm(transactionSection));
     </script>
   </body>
+  <script src="./main.js"></script>
 </html>
