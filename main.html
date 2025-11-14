@@ -275,6 +275,26 @@
       document
         .getElementById("transaction-button")
         .addEventListener("click", () => showForm(transactionSection));
+
+      // 🔵 Highlight Active Button
+      const allButtons = document.querySelectorAll("#main-options > div");
+
+      function highlightActive(button) {
+        allButtons.forEach((btn) => {
+          btn.classList.remove("bg-[#e8f1ff]", "border-[#0b63e9]");
+          btn.classList.add("border-gray-300");
+        });
+
+        button.classList.add("bg-[#e8f1ff]", "border-[#0b63e9]");
+        button.classList.remove("border-gray-300");
+      }
+
+      // Add click event to all option cards
+      allButtons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          highlightActive(this);
+        });
+      });
     </script>
   </body>
   <script src="./main.js"></script>
